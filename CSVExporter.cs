@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using UnityEngine;
 
 namespace Hirai
 {
@@ -57,9 +58,9 @@ namespace Hirai
                     }
                 }
             }
-            catch
+            catch(Exception e)
             {
-                throw new Exception("Something went wrong while saving.");
+                Debug.LogError(e);
             }
         }
     }
