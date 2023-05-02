@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using UnityEngine;
 
 namespace Hirai
@@ -49,7 +50,7 @@ namespace Hirai
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(Path.Join(saveFolderPath,saveName + ".csv"), false, System.Text.Encoding.GetEncoding("shift_jis")))
+                using (StreamWriter sw = new StreamWriter(Path.Join(saveFolderPath,saveName + ".csv"), false))
                 {
                     sw.WriteLine(string.Join(",", labels));
                     foreach (string[] rowData in data)
