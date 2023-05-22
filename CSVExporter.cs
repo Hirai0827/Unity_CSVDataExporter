@@ -50,7 +50,7 @@ namespace Hirai
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(Path.Join(saveFolderPath,saveName + ".csv"), false))
+                using (StreamWriter sw = new StreamWriter(String.Join(saveFolderPath,saveName + ".csv"), false))
                 {
                     sw.WriteLine(string.Join(",", labels));
                     foreach (string[] rowData in data)
